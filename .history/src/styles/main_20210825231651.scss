@@ -1,0 +1,122 @@
+@import "override";
+@import "utility";
+@import "utility_colors";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #fcfcfc;
+}
+ul {
+  list-style-type: none;
+  background-color: lightgreen;
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+}
+.carousel .slide {
+  height: 80vh;
+}
+.carousel .slide img {
+  max-height: 100%;
+  width: auto;
+}
+.image {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .carousel {
+    height: 80vh;
+  }
+  .carousel .slide img {
+    margin: 10vh auto;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .carousel {
+    height: 60vh;
+  }
+  .carousel .slide img {
+    margin: 10vh auto;
+    width: 100vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .carousel {
+    height: 50vh;
+  }
+  .carousel .slide img {
+    margin: 10vh auto;
+    width: 100vw;
+  }
+}
+html,
+body,
+#root,
+#root > div {
+  height: 100%;
+}
+
+.custom-scroll {
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #ddd;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: darken(#ddd, 20%);
+  }
+}
+
+.img-fullsize {
+  * {
+    width: auto !important;
+    height: auto !important;
+  }
+}
+
+.bg-color {
+  background-color: blueviolet;
+}
+
+.animate-blink {
+  animation: blink normal 1.5s infinite ease-in-out;
+  color: red !important;
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+.margin {
+  margin-left: 100%;
+  margin-right: 100%;
+}
+.p-2 {
+  padding-right: 5px;
+}
+.bg-color {
+  background-color: black;
+}
